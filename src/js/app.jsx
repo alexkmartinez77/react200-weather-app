@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './Header/Header';
-import SearchBar from './SearchBar/SearchBar';
-import CurrentWeather from './CurrentWeather/CurrentWeather';
-import SearchHistory from './SearchHistory/SearchHistory';
+import Header from './Components/Header/Header';
+import SearchBar from './Components/SearchBar/SearchBar';
+import CityInformation from './Components/CityInformation/CityInformation';
+import SearchHistory from './Components/SearchHistory/SearchHistory';
 
 export default class App extends React.Component {
   render() {
@@ -16,7 +16,7 @@ export default class App extends React.Component {
         </div>
         <div className='row'>
           <div className='col-12 col-md-6 mb-4'>
-            <CurrentWeather />
+            <CityInformation />
           </div>
           <div className='col-12 col-md-6 mb-4'>
             <SearchHistory />
