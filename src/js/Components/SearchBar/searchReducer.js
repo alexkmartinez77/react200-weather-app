@@ -1,6 +1,11 @@
 const defaultState = {
-  city: '',
-  cityData: {},
+  city:'',
+  cityData: {
+    name:'',
+    coord: {lon:'', lat: ''},
+    main: {temp:'',pressure:'', humidity:'', temp_min:'', temp_max:'', humidity:''},
+    wind: {speed:''}
+  },
 }
 
 export default function SearchReducer(state = defaultState, action) {
@@ -25,7 +30,6 @@ export default function SearchReducer(state = defaultState, action) {
       return {
         ...state,
         cityData: payload.data
-        
       }
     }
     
