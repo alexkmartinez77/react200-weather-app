@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Components/Header/Header';
-import SearchBar from './Components/SearchBar/SearchBar';
+import SearchBar from './Components/SearchBar';
 import CityInformation from './Components/CityInformation/CityInformation';
 import SearchHistory from './Components/SearchHistory/SearchHistory';
 
