@@ -20,6 +20,7 @@ export default class SearchBar extends React.Component {
     dispatch(getWeather(city));
   }
   render() {
+    const { city } = this.props.city;
   return (
     <form>
       <div className='row form-group'>
@@ -27,6 +28,7 @@ export default class SearchBar extends React.Component {
           <input
             type='text'
             className='form-control'
+            value={city}
             onChange={(e) => this.handleCity(e)}
           />
           <button type="button" className="btn btn-outline-secondary" onClick={() => this.getWeatherData()}>Go!</button>
