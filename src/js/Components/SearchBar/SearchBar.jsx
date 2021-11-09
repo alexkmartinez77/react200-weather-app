@@ -1,10 +1,11 @@
 import React from 'react';
-import { updateCity } from './searchActions'
+import { updateCity, getWeather } from './searchActions'
 
 export default class SearchBar extends React.Component {
   constructor(props){
     super(props);
     this.handleCity = this.handleCity.bind(this)
+    this.getWeatherData = this.getWeatherData.bind(this)
   }
 
   handleCity(e){
@@ -12,6 +13,11 @@ export default class SearchBar extends React.Component {
     const city = e.target.value;
     dispatch(updateCity(city));
 
+  }
+
+  getWeatherData(){
+    const {city, dispatch} = this.props;
+    dispatch(getWeather(city));
   }
   render() {
   return (
@@ -23,7 +29,7 @@ export default class SearchBar extends React.Component {
             className='form-control'
             onChange={(e) => this.handleCity(e)}
           />
-          <button type="button" className="btn btn-outline-secondary">Go!</button>
+          <button type="button" className="btn btn-outline-secondary" onClick={() => this.getWeatherData()}>Go!</button>
         </div>
       </div>
     </form>
