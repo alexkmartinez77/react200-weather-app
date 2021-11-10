@@ -10,7 +10,7 @@ export default class App extends React.Component {
       <div className='container'>
         <Header />
         <div className='row justify-content-center'>
-          <div className='col-12 col-md-6'>
+          <div className='col-12'>
             <SearchBar />
           </div>
         </div>
