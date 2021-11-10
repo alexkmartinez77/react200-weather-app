@@ -3,6 +3,7 @@ import React from 'react';
 export class SearchHistory extends React.Component {
 
   render() {
+    console.log(this.props.searchHistory);
   return (
     <div className='card border-info mb-3'>
     <div className='card-header text-white bg-info'>Search History</div>
