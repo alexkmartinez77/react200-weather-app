@@ -14,8 +14,8 @@ export default class SearchBar extends React.Component {
     dispatch(updateCity(city));
   }
 
-  getWeatherData(){
-    const { dispatch, city } = this.props;
+  getWeatherData(city){
+    const { dispatch} = this.props;
     dispatch(getWeather(city));
   }
 
@@ -45,7 +45,7 @@ export default class SearchBar extends React.Component {
             placeholder={this.props.city}
             onChange={(e) => this.handleCity(e)}
           />
-          <button type="button" className="btn btn-outline-secondary" onClick={() => this.getWeatherData()}>Go!</button>
+          <button type="button" className="btn btn-outline-secondary" onClick={() => this.getWeatherData(this.props.city)}>Go!</button>
         </div>
       </div>
     </form>
